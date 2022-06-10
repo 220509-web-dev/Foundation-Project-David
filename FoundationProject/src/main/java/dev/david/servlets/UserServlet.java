@@ -102,24 +102,6 @@ public class UserServlet extends HttpServlet {
                 resp.getWriter().write(mapper.writeValueAsString(errorMsg));
             }
         }
-/*        try{
-            int userId = Integer.parseInt(req.getParameter("id"));
-        } catch(UserNotFoundException e){
-            resp.setStatus(400);
-
-            HashMap<String, Object> errorMsg = new HashMap<>();
-            errorMsg.put("code", 400);
-            errorMsg.put("message", e.getMessage());
-            errorMsg.put("timestamp", LocalDateTime.now().toString());
-
-            resp.getWriter().write(mapper.writeValueAsString(errorMsg));
-        }*/
-
-        /*List<Users> users = userDaoPostgres.getAllUsers();
-
-        String respPayload = mapper.writeValueAsString(users);
-        resp.setContentType("application/json");
-        resp.getWriter().write(respPayload);*/
     }
 
     @Override
