@@ -10,6 +10,9 @@ public interface AppDao {
 
     // Read user
     Users getUserById(int id);
+
+    Users getUserByUsername(String username);
+
     List<Users> getAllUsers();
 
     // Update user

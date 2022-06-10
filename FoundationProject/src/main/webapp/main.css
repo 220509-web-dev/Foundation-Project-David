@@ -1,0 +1,55 @@
+main {
+    margin: 5% 10%;
+    background-color: gray;
+}
+
+/* Tag selector */
+button {
+    font-family: Arial, Heletica, sans-serif !important;
+}
+
+/* Class selector */
+.btn {
+    color: green;
+}
+
+/* Id selector */
+#login-btn {
+    color: white;
+    background-color: green;
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+
+
+#login-form {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    background-color: gray;
+}
+
+.navbar-brand {
+    padding-left: 20%;
+}
+
+/* CSS comment*/
+/* Child selector (applies only to inputs that are direct children of a div) */
+div > input {
+
+}
+
+/* Descendent selector (applies only to anchor tags that are within some element with the class: .some-class*/
+.some-class a {
+
+}
+
+/* Sibling selector (applies only to buttons that are a sibling to a div) */
+div + button {
+
+}
+
+/* CSS Pseudo classes */
+button:hover {
+    background-color: blue !important;
+}

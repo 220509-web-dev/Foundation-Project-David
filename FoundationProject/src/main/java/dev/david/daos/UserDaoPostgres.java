@@ -60,6 +60,30 @@ public class UserDaoPostgres implements AppDao{
         return null;
     }
 
+    public Users getUserByUsername(String username) {
+        // Try with resources
+        try(Connection con = ConnectionUtil.getConnection()){
+            String sql = "select * from social_app.app_users where username = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, username);
+            ResultSet rs = ps.executeQuery();
+
+            rs.next();
+
+            Users user = new Users();
+            user.setUserId(rs.getInt("id"));
+            user.setEmail(rs.getString("email"));
+            user.setAge(rs.getInt("age"));
+            user.setUsername(rs.getString("username"));
+            user.setPassword(rs.getString("password"));
+            return user;
+
+        } catch (SQLException exception){
+            exception.printStackTrace();
+        }
+        return null;
+    }
+
     @Override
     public List<Users> getAllUsers() {
         try(Connection con = ConnectionUtil.getConnection()){
@@ -117,4 +141,5 @@ public class UserDaoPostgres implements AppDao{
             exception.printStackTrace();
         }
     }
+
 }

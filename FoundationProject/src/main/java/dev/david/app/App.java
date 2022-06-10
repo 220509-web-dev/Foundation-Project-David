@@ -12,7 +12,10 @@ import java.sql.Statement;
 import java.util.*;
 
 public class App {
-    public static void main(String[] args)  throws SQLException {
+    public static void main(String[] args) throws SQLException {
+
+
+
         /*Connection con = ConnectionUtil.getConnection();
 
         String sql = "select * from social_app.app_users where id = 1";
